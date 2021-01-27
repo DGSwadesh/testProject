@@ -1,7 +1,12 @@
 var express = require("express")
 var path = require("path")
-var app = express();
 var routes = require("./router")
+var mongoose = require("mongoose")
+var cookiesParser = require("cookies-parser")
+var passport = require("passport")
+var session = require("express-session")
+var flash = require("connect-flash")
+var app = express();
 
 app.set("port" , process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "views"))
